@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A0A30DE2-3B6E-3E0B-E985-93BAF3AF513D}</ProjectGuid>
+    <ProjectGuid>{82632430-7888-8C70-0A52-E7877A03560C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>jp.setchi.ugui-hypertext</AssemblyName>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AA7AAFDD-CF44-A191-F3FB-A2CA21F41521}</ProjectGuid>
+    <ProjectGuid>{3A17027E-DC70-2246-D3F2-6F184AEBDCFA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -1048,27 +1048,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{837DB9CB-CE6E-BE7A-8A93-594E66AC9670}</Project>
+      <Project>{3CC24588-F227-C32C-DC4C-8A8087F3C986}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Runtime.csproj">
-      <Project>{D6D9B621-85DD-4892-2373-4587454D7083}</Project>
+      <Project>{915C5334-4BC3-CDE4-AFD9-88A020EEE73A}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Editor.csproj">
-      <Project>{C3DDDB6B-51B0-7C41-CB73-9D9881CA042D}</Project>
+      <Project>{292D88AC-F069-97D5-348D-D8EDFC7D2E82}</Project>
       <Name>UnityGameFramework.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
-      <Project>{B6F8E229-07A2-7B43-96C1-743D5F1D2A47}</Project>
+      <Project>{E4B98FFA-0EF2-C6F6-A0A3-136867505F5C}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{6318D524-C4F7-DF89-CC43-40CEBF6E8DAC}</Project>
+      <Project>{35331680-E8A0-11A1-9309-EE18B9C5987F}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
     </ProjectReference>
     <ProjectReference Include="jp.setchi.ugui-hypertext.csproj">
-      <Project>{A0A30DE2-3B6E-3E0B-E985-93BAF3AF513D}</Project>
+      <Project>{82632430-7888-8C70-0A52-E7877A03560C}</Project>
       <Name>jp.setchi.ugui-hypertext</Name>
     </ProjectReference>
   </ItemGroup>
