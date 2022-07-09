@@ -121,7 +121,14 @@ public partial class GameEntry
         get;
         private set;
     }
-
+    /// <summary>
+    /// 获取场景组件。
+    /// </summary>
+    public static SceneComponent Scene
+    {
+        get;
+        private set;
+    }
 
     private static void InitBuiltinComponents()
     {
@@ -138,5 +145,6 @@ public partial class GameEntry
         Setting = UnityGameFramework.Runtime.GameEntry.GetComponent<SettingComponent>();
         Sound = UnityGameFramework.Runtime.GameEntry.GetComponent<SoundComponent>();
         Download = UnityGameFramework.Runtime.GameEntry.GetComponent<DownloadComponent>();
+        Scene = UnityGameFramework.Runtime.GameEntry.GetComponent<SceneComponent>();
     }
 }

@@ -30,10 +30,22 @@ function LuaGameEntry:GetUIComponent()
     return LuaUIComponent:GetInstance()
 end
 
+---@return LuaUpdateComponent
+function LuaGameEntry:GetLuaUpdateComponent()
+    return LuaUpdateComponent:GetInstance()
+end
+
+---@return LuaSceneComponent
+function LuaGameEntry:GetLuaSceneComponent()
+    return LuaSceneComponent:GetInstance()
+end
+
 LuaGameEntry.Procedure = LuaGameEntry:GetProcedureComponent()
 LuaGameEntry.LuaEvent = LuaGameEntry:GetLuaEventComponent()
 LuaGameEntry.LuaSound = LuaGameEntry:GetLuaSoundComponent()
 LuaGameEntry.UI = LuaGameEntry:GetUIComponent()
+LuaGameEntry.LuaUpdate = LuaGameEntry:GetLuaUpdateComponent()
+LuaGameEntry.LuaScene = LuaGameEntry:GetLuaSceneComponent()
 
 function LuaGameEntry:Cleanup()
     LuaGameEntry.Procedure:Delete()

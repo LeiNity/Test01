@@ -11,6 +11,7 @@
 UIPrefabPathConfig = 
 {
     [UINameConfig.UILoginPanel.name] = "UILogin/UILoginPanel",
+    [UINameConfig.UILoadingPanel.name] = "UILoading/UILoadingPanel",
 }
 
 return UIPrefabPathConfig

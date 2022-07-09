@@ -10,3 +10,4 @@
 ---@class UINameConfig
 UINameConfig = {}
 UINameConfig.UILoginPanel = {name = "UILoginPanel",group = UIFormGroupType.Background}
+UINameConfig.UILoadingPanel = {name = "UILoadingPanel",group = UIFormGroupType.Background}

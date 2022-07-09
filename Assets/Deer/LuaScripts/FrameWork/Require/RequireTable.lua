@@ -12,7 +12,10 @@ require "Procedure/Require/RequireProcedure"
 require "Definition/Require/RequireDefinition"
 ---Component
 require "Component/Require/RequireComponent"
+---SceneScript
+require "SceneScript.Require.RequireSceneScript"
 ---Base
 require "Base.LuaGameEntry"
 ---UI
 require "UI/Require/RequireUI"
+
