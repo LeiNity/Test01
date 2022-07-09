@@ -122,7 +122,7 @@
 -define:ODIN_INSPECTOR_3
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"F:/LeiNity/Gf_Test01/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"F:/LeiNity/PzLeiNity/Test01/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"F:/Program Files/Unity 2021.3.0f1c1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"F:/Program Files/Unity 2021.3.0f1c1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"F:/Program Files/Unity 2021.3.0f1c1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

@@ -22,6 +22,7 @@ public class GameEntryWrap
 		L.RegVar("Resource", new LuaCSFunction(get_Resource), null);
 		L.RegVar("Setting", new LuaCSFunction(get_Setting), null);
 		L.RegVar("Sound", new LuaCSFunction(get_Sound), null);
+		L.RegVar("Scene", new LuaCSFunction(get_Scene), null);
 		L.RegVar("GameSettings", new LuaCSFunction(get_GameSettings), null);
 		L.RegVar("Lua", new LuaCSFunction(get_Lua), null);
 		L.RegVar("Messenger", new LuaCSFunction(get_Messenger), null);
@@ -224,6 +225,20 @@ public class GameEntryWrap
 		try
 		{
 			ToLua.PushSealed(L, GameEntry.Sound);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_Scene(IntPtr L)
+	{
+		try
+		{
+			ToLua.PushSealed(L, GameEntry.Scene);
 			return 1;
 		}
 		catch (Exception e)

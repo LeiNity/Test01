@@ -24,8 +24,17 @@ public class DelegateFactory
 		dict.Add(typeof(System.Comparison<int>), factory.System_Comparison_int);
 		dict.Add(typeof(System.Func<int,int>), factory.System_Func_int_int);
 		dict.Add(typeof(RegistFunction), factory.RegistFunction);
+		dict.Add(typeof(LuaComponent.OnLoadScriptSuccess), factory.LuaComponent_OnLoadScriptSuccess);
+		dict.Add(typeof(LuaComponent.OnLoadScriptFailure), factory.LuaComponent_OnLoadScriptFailure);
 		dict.Add(typeof(UnityEngine.Canvas.WillRenderCanvases), factory.UnityEngine_Canvas_WillRenderCanvases);
 		dict.Add(typeof(UnityEngine.RectTransform.ReapplyDrivenProperties), factory.UnityEngine_RectTransform_ReapplyDrivenProperties);
+		dict.Add(typeof(System.EventHandler<GameFramework.Event.GameEventArgs>), factory.System_EventHandler_GameFramework_Event_GameEventArgs);
+		dict.Add(typeof(System.Predicate<GameFramework.ObjectPool.ObjectPoolBase>), factory.System_Predicate_GameFramework_ObjectPool_ObjectPoolBase);
+		dict.Add(typeof(GameFramework.Resource.DecryptResourceCallback), factory.GameFramework_Resource_DecryptResourceCallback);
+		dict.Add(typeof(GameFramework.Resource.InitResourcesCompleteCallback), factory.GameFramework_Resource_InitResourcesCompleteCallback);
+		dict.Add(typeof(GameFramework.Resource.CheckResourcesCompleteCallback), factory.GameFramework_Resource_CheckResourcesCompleteCallback);
+		dict.Add(typeof(GameFramework.Resource.ApplyResourcesCompleteCallback), factory.GameFramework_Resource_ApplyResourcesCompleteCallback);
+		dict.Add(typeof(GameFramework.Resource.UpdateResourcesCompleteCallback), factory.GameFramework_Resource_UpdateResourcesCompleteCallback);
 		dict.Add(typeof(UnityEngine.Camera.CameraCallback), factory.UnityEngine_Camera_CameraCallback);
 		dict.Add(typeof(UnityEngine.Application.AdvertisingIdentifierCallback), factory.UnityEngine_Application_AdvertisingIdentifierCallback);
 		dict.Add(typeof(UnityEngine.Application.LowMemoryCallback), factory.UnityEngine_Application_LowMemoryCallback);
@@ -33,6 +42,7 @@ public class DelegateFactory
 		dict.Add(typeof(System.Action<bool>), factory.System_Action_bool);
 		dict.Add(typeof(System.Action<string>), factory.System_Action_string);
 		dict.Add(typeof(System.Func<bool>), factory.System_Func_bool);
+		dict.Add(typeof(System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>>), factory.System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair);
 		dict.Add(typeof(UnityEngine.AudioClip.PCMReaderCallback), factory.UnityEngine_AudioClip_PCMReaderCallback);
 		dict.Add(typeof(UnityEngine.AudioClip.PCMSetPositionCallback), factory.UnityEngine_AudioClip_PCMSetPositionCallback);
 		dict.Add(typeof(System.Action<UnityEngine.AsyncOperation>), factory.System_Action_UnityEngine_AsyncOperation);
@@ -44,8 +54,17 @@ public class DelegateFactory
 		DelegateTraits<System.Comparison<int>>.Init(factory.System_Comparison_int);
 		DelegateTraits<System.Func<int,int>>.Init(factory.System_Func_int_int);
 		DelegateTraits<RegistFunction>.Init(factory.RegistFunction);
+		DelegateTraits<LuaComponent.OnLoadScriptSuccess>.Init(factory.LuaComponent_OnLoadScriptSuccess);
+		DelegateTraits<LuaComponent.OnLoadScriptFailure>.Init(factory.LuaComponent_OnLoadScriptFailure);
 		DelegateTraits<UnityEngine.Canvas.WillRenderCanvases>.Init(factory.UnityEngine_Canvas_WillRenderCanvases);
 		DelegateTraits<UnityEngine.RectTransform.ReapplyDrivenProperties>.Init(factory.UnityEngine_RectTransform_ReapplyDrivenProperties);
+		DelegateTraits<System.EventHandler<GameFramework.Event.GameEventArgs>>.Init(factory.System_EventHandler_GameFramework_Event_GameEventArgs);
+		DelegateTraits<System.Predicate<GameFramework.ObjectPool.ObjectPoolBase>>.Init(factory.System_Predicate_GameFramework_ObjectPool_ObjectPoolBase);
+		DelegateTraits<GameFramework.Resource.DecryptResourceCallback>.Init(factory.GameFramework_Resource_DecryptResourceCallback);
+		DelegateTraits<GameFramework.Resource.InitResourcesCompleteCallback>.Init(factory.GameFramework_Resource_InitResourcesCompleteCallback);
+		DelegateTraits<GameFramework.Resource.CheckResourcesCompleteCallback>.Init(factory.GameFramework_Resource_CheckResourcesCompleteCallback);
+		DelegateTraits<GameFramework.Resource.ApplyResourcesCompleteCallback>.Init(factory.GameFramework_Resource_ApplyResourcesCompleteCallback);
+		DelegateTraits<GameFramework.Resource.UpdateResourcesCompleteCallback>.Init(factory.GameFramework_Resource_UpdateResourcesCompleteCallback);
 		DelegateTraits<UnityEngine.Camera.CameraCallback>.Init(factory.UnityEngine_Camera_CameraCallback);
 		DelegateTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Init(factory.UnityEngine_Application_AdvertisingIdentifierCallback);
 		DelegateTraits<UnityEngine.Application.LowMemoryCallback>.Init(factory.UnityEngine_Application_LowMemoryCallback);
@@ -53,6 +72,7 @@ public class DelegateFactory
 		DelegateTraits<System.Action<bool>>.Init(factory.System_Action_bool);
 		DelegateTraits<System.Action<string>>.Init(factory.System_Action_string);
 		DelegateTraits<System.Func<bool>>.Init(factory.System_Func_bool);
+		DelegateTraits<System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>>>.Init(factory.System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair);
 		DelegateTraits<UnityEngine.AudioClip.PCMReaderCallback>.Init(factory.UnityEngine_AudioClip_PCMReaderCallback);
 		DelegateTraits<UnityEngine.AudioClip.PCMSetPositionCallback>.Init(factory.UnityEngine_AudioClip_PCMSetPositionCallback);
 		DelegateTraits<System.Action<UnityEngine.AsyncOperation>>.Init(factory.System_Action_UnityEngine_AsyncOperation);
@@ -64,8 +84,17 @@ public class DelegateFactory
 		TypeTraits<System.Comparison<int>>.Init(factory.Check_System_Comparison_int);
 		TypeTraits<System.Func<int,int>>.Init(factory.Check_System_Func_int_int);
 		TypeTraits<RegistFunction>.Init(factory.Check_RegistFunction);
+		TypeTraits<LuaComponent.OnLoadScriptSuccess>.Init(factory.Check_LuaComponent_OnLoadScriptSuccess);
+		TypeTraits<LuaComponent.OnLoadScriptFailure>.Init(factory.Check_LuaComponent_OnLoadScriptFailure);
 		TypeTraits<UnityEngine.Canvas.WillRenderCanvases>.Init(factory.Check_UnityEngine_Canvas_WillRenderCanvases);
 		TypeTraits<UnityEngine.RectTransform.ReapplyDrivenProperties>.Init(factory.Check_UnityEngine_RectTransform_ReapplyDrivenProperties);
+		TypeTraits<System.EventHandler<GameFramework.Event.GameEventArgs>>.Init(factory.Check_System_EventHandler_GameFramework_Event_GameEventArgs);
+		TypeTraits<System.Predicate<GameFramework.ObjectPool.ObjectPoolBase>>.Init(factory.Check_System_Predicate_GameFramework_ObjectPool_ObjectPoolBase);
+		TypeTraits<GameFramework.Resource.DecryptResourceCallback>.Init(factory.Check_GameFramework_Resource_DecryptResourceCallback);
+		TypeTraits<GameFramework.Resource.InitResourcesCompleteCallback>.Init(factory.Check_GameFramework_Resource_InitResourcesCompleteCallback);
+		TypeTraits<GameFramework.Resource.CheckResourcesCompleteCallback>.Init(factory.Check_GameFramework_Resource_CheckResourcesCompleteCallback);
+		TypeTraits<GameFramework.Resource.ApplyResourcesCompleteCallback>.Init(factory.Check_GameFramework_Resource_ApplyResourcesCompleteCallback);
+		TypeTraits<GameFramework.Resource.UpdateResourcesCompleteCallback>.Init(factory.Check_GameFramework_Resource_UpdateResourcesCompleteCallback);
 		TypeTraits<UnityEngine.Camera.CameraCallback>.Init(factory.Check_UnityEngine_Camera_CameraCallback);
 		TypeTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Init(factory.Check_UnityEngine_Application_AdvertisingIdentifierCallback);
 		TypeTraits<UnityEngine.Application.LowMemoryCallback>.Init(factory.Check_UnityEngine_Application_LowMemoryCallback);
@@ -73,6 +102,7 @@ public class DelegateFactory
 		TypeTraits<System.Action<bool>>.Init(factory.Check_System_Action_bool);
 		TypeTraits<System.Action<string>>.Init(factory.Check_System_Action_string);
 		TypeTraits<System.Func<bool>>.Init(factory.Check_System_Func_bool);
+		TypeTraits<System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>>>.Init(factory.Check_System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair);
 		TypeTraits<UnityEngine.AudioClip.PCMReaderCallback>.Init(factory.Check_UnityEngine_AudioClip_PCMReaderCallback);
 		TypeTraits<UnityEngine.AudioClip.PCMSetPositionCallback>.Init(factory.Check_UnityEngine_AudioClip_PCMSetPositionCallback);
 		TypeTraits<System.Action<UnityEngine.AsyncOperation>>.Init(factory.Check_System_Action_UnityEngine_AsyncOperation);
@@ -84,8 +114,17 @@ public class DelegateFactory
 		StackTraits<System.Comparison<int>>.Push = factory.Push_System_Comparison_int;
 		StackTraits<System.Func<int,int>>.Push = factory.Push_System_Func_int_int;
 		StackTraits<RegistFunction>.Push = factory.Push_RegistFunction;
+		StackTraits<LuaComponent.OnLoadScriptSuccess>.Push = factory.Push_LuaComponent_OnLoadScriptSuccess;
+		StackTraits<LuaComponent.OnLoadScriptFailure>.Push = factory.Push_LuaComponent_OnLoadScriptFailure;
 		StackTraits<UnityEngine.Canvas.WillRenderCanvases>.Push = factory.Push_UnityEngine_Canvas_WillRenderCanvases;
 		StackTraits<UnityEngine.RectTransform.ReapplyDrivenProperties>.Push = factory.Push_UnityEngine_RectTransform_ReapplyDrivenProperties;
+		StackTraits<System.EventHandler<GameFramework.Event.GameEventArgs>>.Push = factory.Push_System_EventHandler_GameFramework_Event_GameEventArgs;
+		StackTraits<System.Predicate<GameFramework.ObjectPool.ObjectPoolBase>>.Push = factory.Push_System_Predicate_GameFramework_ObjectPool_ObjectPoolBase;
+		StackTraits<GameFramework.Resource.DecryptResourceCallback>.Push = factory.Push_GameFramework_Resource_DecryptResourceCallback;
+		StackTraits<GameFramework.Resource.InitResourcesCompleteCallback>.Push = factory.Push_GameFramework_Resource_InitResourcesCompleteCallback;
+		StackTraits<GameFramework.Resource.CheckResourcesCompleteCallback>.Push = factory.Push_GameFramework_Resource_CheckResourcesCompleteCallback;
+		StackTraits<GameFramework.Resource.ApplyResourcesCompleteCallback>.Push = factory.Push_GameFramework_Resource_ApplyResourcesCompleteCallback;
+		StackTraits<GameFramework.Resource.UpdateResourcesCompleteCallback>.Push = factory.Push_GameFramework_Resource_UpdateResourcesCompleteCallback;
 		StackTraits<UnityEngine.Camera.CameraCallback>.Push = factory.Push_UnityEngine_Camera_CameraCallback;
 		StackTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Push = factory.Push_UnityEngine_Application_AdvertisingIdentifierCallback;
 		StackTraits<UnityEngine.Application.LowMemoryCallback>.Push = factory.Push_UnityEngine_Application_LowMemoryCallback;
@@ -93,6 +132,7 @@ public class DelegateFactory
 		StackTraits<System.Action<bool>>.Push = factory.Push_System_Action_bool;
 		StackTraits<System.Action<string>>.Push = factory.Push_System_Action_string;
 		StackTraits<System.Func<bool>>.Push = factory.Push_System_Func_bool;
+		StackTraits<System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>>>.Push = factory.Push_System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair;
 		StackTraits<UnityEngine.AudioClip.PCMReaderCallback>.Push = factory.Push_UnityEngine_AudioClip_PCMReaderCallback;
 		StackTraits<UnityEngine.AudioClip.PCMSetPositionCallback>.Push = factory.Push_UnityEngine_AudioClip_PCMSetPositionCallback;
 		StackTraits<System.Action<UnityEngine.AsyncOperation>>.Push = factory.Push_System_Action_UnityEngine_AsyncOperation;
@@ -613,6 +653,124 @@ public class DelegateFactory
 		ToLua.Push(L, o);
 	}
 
+	class LuaComponent_OnLoadScriptSuccess_Event : LuaDelegate
+	{
+		public LuaComponent_OnLoadScriptSuccess_Event(LuaFunction func) : base(func) { }
+		public LuaComponent_OnLoadScriptSuccess_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(string param0)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(string param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public LuaComponent.OnLoadScriptSuccess LuaComponent_OnLoadScriptSuccess(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			LuaComponent.OnLoadScriptSuccess fn = delegate(string param0) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			LuaComponent_OnLoadScriptSuccess_Event target = new LuaComponent_OnLoadScriptSuccess_Event(func);
+			LuaComponent.OnLoadScriptSuccess d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			LuaComponent_OnLoadScriptSuccess_Event target = new LuaComponent_OnLoadScriptSuccess_Event(func, self);
+			LuaComponent.OnLoadScriptSuccess d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_LuaComponent_OnLoadScriptSuccess(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<LuaComponent.OnLoadScriptSuccess>(L, pos);
+	}
+
+	void Push_LuaComponent_OnLoadScriptSuccess(IntPtr L, LuaComponent.OnLoadScriptSuccess o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class LuaComponent_OnLoadScriptFailure_Event : LuaDelegate
+	{
+		public LuaComponent_OnLoadScriptFailure_Event(LuaFunction func) : base(func) { }
+		public LuaComponent_OnLoadScriptFailure_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(string param0, GameFramework.Resource.LoadResourceStatus param1, string param2)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(string param0, GameFramework.Resource.LoadResourceStatus param1, string param2)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public LuaComponent.OnLoadScriptFailure LuaComponent_OnLoadScriptFailure(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			LuaComponent.OnLoadScriptFailure fn = delegate(string param0, GameFramework.Resource.LoadResourceStatus param1, string param2) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			LuaComponent_OnLoadScriptFailure_Event target = new LuaComponent_OnLoadScriptFailure_Event(func);
+			LuaComponent.OnLoadScriptFailure d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			LuaComponent_OnLoadScriptFailure_Event target = new LuaComponent_OnLoadScriptFailure_Event(func, self);
+			LuaComponent.OnLoadScriptFailure d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_LuaComponent_OnLoadScriptFailure(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<LuaComponent.OnLoadScriptFailure>(L, pos);
+	}
+
+	void Push_LuaComponent_OnLoadScriptFailure(IntPtr L, LuaComponent.OnLoadScriptFailure o)
+	{
+		ToLua.Push(L, o);
+	}
+
 	class UnityEngine_Canvas_WillRenderCanvases_Event : LuaDelegate
 	{
 		public UnityEngine_Canvas_WillRenderCanvases_Event(LuaFunction func) : base(func) { }
@@ -719,6 +877,439 @@ public class DelegateFactory
 	}
 
 	void Push_UnityEngine_RectTransform_ReapplyDrivenProperties(IntPtr L, UnityEngine.RectTransform.ReapplyDrivenProperties o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_EventHandler_GameFramework_Event_GameEventArgs_Event : LuaDelegate
+	{
+		public System_EventHandler_GameFramework_Event_GameEventArgs_Event(LuaFunction func) : base(func) { }
+		public System_EventHandler_GameFramework_Event_GameEventArgs_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(object param0, GameFramework.Event.GameEventArgs param1)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PushObject(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(object param0, GameFramework.Event.GameEventArgs param1)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PushObject(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public System.EventHandler<GameFramework.Event.GameEventArgs> System_EventHandler_GameFramework_Event_GameEventArgs(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.EventHandler<GameFramework.Event.GameEventArgs> fn = delegate(object param0, GameFramework.Event.GameEventArgs param1) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_EventHandler_GameFramework_Event_GameEventArgs_Event target = new System_EventHandler_GameFramework_Event_GameEventArgs_Event(func);
+			System.EventHandler<GameFramework.Event.GameEventArgs> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_EventHandler_GameFramework_Event_GameEventArgs_Event target = new System_EventHandler_GameFramework_Event_GameEventArgs_Event(func, self);
+			System.EventHandler<GameFramework.Event.GameEventArgs> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_EventHandler_GameFramework_Event_GameEventArgs(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<System.EventHandler<GameFramework.Event.GameEventArgs>>(L, pos);
+	}
+
+	void Push_System_EventHandler_GameFramework_Event_GameEventArgs(IntPtr L, System.EventHandler<GameFramework.Event.GameEventArgs> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Predicate_GameFramework_ObjectPool_ObjectPoolBase_Event : LuaDelegate
+	{
+		public System_Predicate_GameFramework_ObjectPool_ObjectPoolBase_Event(LuaFunction func) : base(func) { }
+		public System_Predicate_GameFramework_ObjectPool_ObjectPoolBase_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public bool Call(GameFramework.ObjectPool.ObjectPoolBase param0)
+		{
+			func.BeginPCall();
+			func.PushObject(param0);
+			func.PCall();
+			bool ret = func.CheckBoolean();
+			func.EndPCall();
+			return ret;
+		}
+
+		public bool CallWithSelf(GameFramework.ObjectPool.ObjectPoolBase param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PushObject(param0);
+			func.PCall();
+			bool ret = func.CheckBoolean();
+			func.EndPCall();
+			return ret;
+		}
+	}
+
+	public System.Predicate<GameFramework.ObjectPool.ObjectPoolBase> System_Predicate_GameFramework_ObjectPool_ObjectPoolBase(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Predicate<GameFramework.ObjectPool.ObjectPoolBase> fn = delegate(GameFramework.ObjectPool.ObjectPoolBase param0) { return false; };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Predicate_GameFramework_ObjectPool_ObjectPoolBase_Event target = new System_Predicate_GameFramework_ObjectPool_ObjectPoolBase_Event(func);
+			System.Predicate<GameFramework.ObjectPool.ObjectPoolBase> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Predicate_GameFramework_ObjectPool_ObjectPoolBase_Event target = new System_Predicate_GameFramework_ObjectPool_ObjectPoolBase_Event(func, self);
+			System.Predicate<GameFramework.ObjectPool.ObjectPoolBase> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Predicate_GameFramework_ObjectPool_ObjectPoolBase(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<System.Predicate<GameFramework.ObjectPool.ObjectPoolBase>>(L, pos);
+	}
+
+	void Push_System_Predicate_GameFramework_ObjectPool_ObjectPoolBase(IntPtr L, System.Predicate<GameFramework.ObjectPool.ObjectPoolBase> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class GameFramework_Resource_DecryptResourceCallback_Event : LuaDelegate
+	{
+		public GameFramework_Resource_DecryptResourceCallback_Event(LuaFunction func) : base(func) { }
+		public GameFramework_Resource_DecryptResourceCallback_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(byte[] param0, int param1, int param2, string param3, string param4, string param5, bool param6, string param7, byte param8, int param9, int param10)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.Push(param3);
+			func.Push(param4);
+			func.Push(param5);
+			func.Push(param6);
+			func.Push(param7);
+			func.Push(param8);
+			func.Push(param9);
+			func.Push(param10);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(byte[] param0, int param1, int param2, string param3, string param4, string param5, bool param6, string param7, byte param8, int param9, int param10)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.Push(param3);
+			func.Push(param4);
+			func.Push(param5);
+			func.Push(param6);
+			func.Push(param7);
+			func.Push(param8);
+			func.Push(param9);
+			func.Push(param10);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public GameFramework.Resource.DecryptResourceCallback GameFramework_Resource_DecryptResourceCallback(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			GameFramework.Resource.DecryptResourceCallback fn = delegate(byte[] param0, int param1, int param2, string param3, string param4, string param5, bool param6, string param7, byte param8, int param9, int param10) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			GameFramework_Resource_DecryptResourceCallback_Event target = new GameFramework_Resource_DecryptResourceCallback_Event(func);
+			GameFramework.Resource.DecryptResourceCallback d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			GameFramework_Resource_DecryptResourceCallback_Event target = new GameFramework_Resource_DecryptResourceCallback_Event(func, self);
+			GameFramework.Resource.DecryptResourceCallback d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_GameFramework_Resource_DecryptResourceCallback(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<GameFramework.Resource.DecryptResourceCallback>(L, pos);
+	}
+
+	void Push_GameFramework_Resource_DecryptResourceCallback(IntPtr L, GameFramework.Resource.DecryptResourceCallback o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class GameFramework_Resource_InitResourcesCompleteCallback_Event : LuaDelegate
+	{
+		public GameFramework_Resource_InitResourcesCompleteCallback_Event(LuaFunction func) : base(func) { }
+		public GameFramework_Resource_InitResourcesCompleteCallback_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call()
+		{
+			func.Call();
+		}
+
+		public void CallWithSelf()
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public GameFramework.Resource.InitResourcesCompleteCallback GameFramework_Resource_InitResourcesCompleteCallback(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			GameFramework.Resource.InitResourcesCompleteCallback fn = delegate() { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			GameFramework_Resource_InitResourcesCompleteCallback_Event target = new GameFramework_Resource_InitResourcesCompleteCallback_Event(func);
+			GameFramework.Resource.InitResourcesCompleteCallback d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			GameFramework_Resource_InitResourcesCompleteCallback_Event target = new GameFramework_Resource_InitResourcesCompleteCallback_Event(func, self);
+			GameFramework.Resource.InitResourcesCompleteCallback d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_GameFramework_Resource_InitResourcesCompleteCallback(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<GameFramework.Resource.InitResourcesCompleteCallback>(L, pos);
+	}
+
+	void Push_GameFramework_Resource_InitResourcesCompleteCallback(IntPtr L, GameFramework.Resource.InitResourcesCompleteCallback o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class GameFramework_Resource_CheckResourcesCompleteCallback_Event : LuaDelegate
+	{
+		public GameFramework_Resource_CheckResourcesCompleteCallback_Event(LuaFunction func) : base(func) { }
+		public GameFramework_Resource_CheckResourcesCompleteCallback_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(int param0, int param1, int param2, long param3, long param4)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.Push(param3);
+			func.Push(param4);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(int param0, int param1, int param2, long param3, long param4)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.Push(param1);
+			func.Push(param2);
+			func.Push(param3);
+			func.Push(param4);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public GameFramework.Resource.CheckResourcesCompleteCallback GameFramework_Resource_CheckResourcesCompleteCallback(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			GameFramework.Resource.CheckResourcesCompleteCallback fn = delegate(int param0, int param1, int param2, long param3, long param4) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			GameFramework_Resource_CheckResourcesCompleteCallback_Event target = new GameFramework_Resource_CheckResourcesCompleteCallback_Event(func);
+			GameFramework.Resource.CheckResourcesCompleteCallback d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			GameFramework_Resource_CheckResourcesCompleteCallback_Event target = new GameFramework_Resource_CheckResourcesCompleteCallback_Event(func, self);
+			GameFramework.Resource.CheckResourcesCompleteCallback d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_GameFramework_Resource_CheckResourcesCompleteCallback(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<GameFramework.Resource.CheckResourcesCompleteCallback>(L, pos);
+	}
+
+	void Push_GameFramework_Resource_CheckResourcesCompleteCallback(IntPtr L, GameFramework.Resource.CheckResourcesCompleteCallback o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class GameFramework_Resource_ApplyResourcesCompleteCallback_Event : LuaDelegate
+	{
+		public GameFramework_Resource_ApplyResourcesCompleteCallback_Event(LuaFunction func) : base(func) { }
+		public GameFramework_Resource_ApplyResourcesCompleteCallback_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(string param0, bool param1)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.Push(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(string param0, bool param1)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.Push(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public GameFramework.Resource.ApplyResourcesCompleteCallback GameFramework_Resource_ApplyResourcesCompleteCallback(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			GameFramework.Resource.ApplyResourcesCompleteCallback fn = delegate(string param0, bool param1) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			GameFramework_Resource_ApplyResourcesCompleteCallback_Event target = new GameFramework_Resource_ApplyResourcesCompleteCallback_Event(func);
+			GameFramework.Resource.ApplyResourcesCompleteCallback d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			GameFramework_Resource_ApplyResourcesCompleteCallback_Event target = new GameFramework_Resource_ApplyResourcesCompleteCallback_Event(func, self);
+			GameFramework.Resource.ApplyResourcesCompleteCallback d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_GameFramework_Resource_ApplyResourcesCompleteCallback(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<GameFramework.Resource.ApplyResourcesCompleteCallback>(L, pos);
+	}
+
+	void Push_GameFramework_Resource_ApplyResourcesCompleteCallback(IntPtr L, GameFramework.Resource.ApplyResourcesCompleteCallback o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class GameFramework_Resource_UpdateResourcesCompleteCallback_Event : LuaDelegate
+	{
+		public GameFramework_Resource_UpdateResourcesCompleteCallback_Event(LuaFunction func) : base(func) { }
+		public GameFramework_Resource_UpdateResourcesCompleteCallback_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(GameFramework.Resource.IResourceGroup param0, bool param1)
+		{
+			func.BeginPCall();
+			func.PushObject(param0);
+			func.Push(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(GameFramework.Resource.IResourceGroup param0, bool param1)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PushObject(param0);
+			func.Push(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public GameFramework.Resource.UpdateResourcesCompleteCallback GameFramework_Resource_UpdateResourcesCompleteCallback(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			GameFramework.Resource.UpdateResourcesCompleteCallback fn = delegate(GameFramework.Resource.IResourceGroup param0, bool param1) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			GameFramework_Resource_UpdateResourcesCompleteCallback_Event target = new GameFramework_Resource_UpdateResourcesCompleteCallback_Event(func);
+			GameFramework.Resource.UpdateResourcesCompleteCallback d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			GameFramework_Resource_UpdateResourcesCompleteCallback_Event target = new GameFramework_Resource_UpdateResourcesCompleteCallback_Event(func, self);
+			GameFramework.Resource.UpdateResourcesCompleteCallback d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_GameFramework_Resource_UpdateResourcesCompleteCallback(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<GameFramework.Resource.UpdateResourcesCompleteCallback>(L, pos);
+	}
+
+	void Push_GameFramework_Resource_UpdateResourcesCompleteCallback(IntPtr L, GameFramework.Resource.UpdateResourcesCompleteCallback o)
 	{
 		ToLua.Push(L, o);
 	}
@@ -1124,6 +1715,65 @@ public class DelegateFactory
 	}
 
 	void Push_System_Func_bool(IntPtr L, System.Func<bool> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event : LuaDelegate
+	{
+		public System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event(LuaFunction func) : base(func) { }
+		public System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(UnityEngine.PhysicsScene param0, Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair> param1)
+		{
+			func.BeginPCall();
+			func.PushValue(param0);
+			func.PushValue(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(UnityEngine.PhysicsScene param0, Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair> param1)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PushValue(param0);
+			func.PushValue(param1);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>> System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>> fn = delegate(UnityEngine.PhysicsScene param0, Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair> param1) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event target = new System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event(func);
+			System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event target = new System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event(func, self);
+			System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType<System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>>>(L, pos);
+	}
+
+	void Push_System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair(IntPtr L, System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>> o)
 	{
 		ToLua.Push(L, o);
 	}

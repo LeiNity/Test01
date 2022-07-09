@@ -25,6 +25,9 @@ public class UnityEngine_ParticleSystemWrap
 		L.RegFunction("TriggerSubEmitter", new LuaCSFunction(TriggerSubEmitter));
 		L.RegFunction("ResetPreMappedBufferMemory", new LuaCSFunction(ResetPreMappedBufferMemory));
 		L.RegFunction("SetMaximumPreMappedBufferCounts", new LuaCSFunction(SetMaximumPreMappedBufferCounts));
+		L.RegFunction("AllocateAxisOfRotationAttribute", new LuaCSFunction(AllocateAxisOfRotationAttribute));
+		L.RegFunction("AllocateMeshIndexAttribute", new LuaCSFunction(AllocateMeshIndexAttribute));
+		L.RegFunction("AllocateCustomDataAttribute", new LuaCSFunction(AllocateCustomDataAttribute));
 		L.RegFunction("New", new LuaCSFunction(_CreateUnityEngine_ParticleSystem));
 		L.RegFunction("__eq", new LuaCSFunction(op_Equality));
 		L.RegFunction("__tostring", new LuaCSFunction(ToLua.op_ToString));
@@ -301,11 +304,28 @@ public class UnityEngine_ParticleSystemWrap
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 1);
-			UnityEngine.ParticleSystem obj = (UnityEngine.ParticleSystem)ToLua.CheckObject<UnityEngine.ParticleSystem>(L, 1);
-			UnityEngine.ParticleSystem.Trails o = obj.GetTrails();
-			ToLua.PushValue(L, o);
-			return 1;
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 1)
+			{
+				UnityEngine.ParticleSystem obj = (UnityEngine.ParticleSystem)ToLua.CheckObject<UnityEngine.ParticleSystem>(L, 1);
+				UnityEngine.ParticleSystem.Trails o = obj.GetTrails();
+				ToLua.PushValue(L, o);
+				return 1;
+			}
+			else if (count == 2)
+			{
+				UnityEngine.ParticleSystem obj = (UnityEngine.ParticleSystem)ToLua.CheckObject<UnityEngine.ParticleSystem>(L, 1);
+				UnityEngine.ParticleSystem.Trails arg0 = StackTraits<UnityEngine.ParticleSystem.Trails>.Check(L, 2);
+				int o = obj.GetTrails(ref arg0);
+				LuaDLL.lua_pushinteger(L, o);
+				ToLua.PushValue(L, arg0);
+				return 2;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: UnityEngine.ParticleSystem.GetTrails");
+			}
 		}
 		catch (Exception e)
 		{
@@ -646,6 +666,55 @@ public class UnityEngine_ParticleSystemWrap
 			int arg0 = (int)LuaDLL.luaL_checkinteger(L, 1);
 			int arg1 = (int)LuaDLL.luaL_checkinteger(L, 2);
 			UnityEngine.ParticleSystem.SetMaximumPreMappedBufferCounts(arg0, arg1);
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int AllocateAxisOfRotationAttribute(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			UnityEngine.ParticleSystem obj = (UnityEngine.ParticleSystem)ToLua.CheckObject<UnityEngine.ParticleSystem>(L, 1);
+			obj.AllocateAxisOfRotationAttribute();
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int AllocateMeshIndexAttribute(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			UnityEngine.ParticleSystem obj = (UnityEngine.ParticleSystem)ToLua.CheckObject<UnityEngine.ParticleSystem>(L, 1);
+			obj.AllocateMeshIndexAttribute();
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int AllocateCustomDataAttribute(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			UnityEngine.ParticleSystem obj = (UnityEngine.ParticleSystem)ToLua.CheckObject<UnityEngine.ParticleSystem>(L, 1);
+			UnityEngine.ParticleSystemCustomData arg0 = (UnityEngine.ParticleSystemCustomData)ToLua.CheckObject(L, 2, TypeTraits<UnityEngine.ParticleSystemCustomData>.type);
+			obj.AllocateCustomDataAttribute(arg0);
 			return 0;
 		}
 		catch (Exception e)

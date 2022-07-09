@@ -19,12 +19,25 @@ public static class LuaBinder
 		UnityGameFramework_Runtime_SoundComponentWrap.Register(L);
 		EventNameWrap.Register(L);
 		Deer_DeerUIComponentWrap.Register(L);
+		LuaComponentWrap.Register(L);
 		LogWrap.Register(L);
 		UnityEngine_CanvasWrap.Register(L);
 		UnityEngine_UI_GraphicRaycasterWrap.Register(L);
 		UnityEngine_RectTransformWrap.Register(L);
 		Deer_ComponentBinderWrap.Register(L);
 		CameraComponentWrap.Register(L);
+		ColorTypeWrap.Register(L);
+		UnityGameFramework_Runtime_EventComponentWrap.Register(L);
+		UnityGameFramework_Runtime_SceneComponentWrap.Register(L);
+		UnityGameFramework_Runtime_LoadSceneSuccessEventArgsWrap.Register(L);
+		UnityGameFramework_Runtime_LoadSceneFailureEventArgsWrap.Register(L);
+		UnityGameFramework_Runtime_LoadSceneUpdateEventArgsWrap.Register(L);
+		UnityGameFramework_Runtime_LoadSceneDependencyAssetEventArgsWrap.Register(L);
+		UnityGameFramework_Runtime_UnloadSceneSuccessEventArgsWrap.Register(L);
+		UnityGameFramework_Runtime_UnloadSceneFailureEventArgsWrap.Register(L);
+		UnityGameFramework_Runtime_ObjectPoolComponentWrap.Register(L);
+		UnityGameFramework_Runtime_ResourceComponentWrap.Register(L);
+		Constant_AssetPriorityWrap.Register(L);
 		LuaProfilerWrap.Register(L);
 		L.RegFunction("RegistFunction", new LuaCSFunction(RegistFunction));
 		L.BeginModule("LuaInterface");
@@ -89,22 +102,38 @@ public static class LuaBinder
 		Deer_ProcedureBaseWrap.Register(L);
 		L.EndModule();
 		L.BeginModule("GameFramework");
+		GameFramework_BaseEventArgsWrap.Register(L);
+		GameFramework_GameFrameworkEventArgsWrap.Register(L);
 		L.BeginModule("Procedure");
 		GameFramework_Procedure_ProcedureBaseWrap.Register(L);
 		L.EndModule();
 		L.BeginModule("Fsm");
 		GameFramework_Fsm_FsmState_GameFramework_Procedure_IProcedureManagerWrap.Register(L);
 		L.EndModule();
+		L.BeginModule("Event");
+		GameFramework_Event_GameEventArgsWrap.Register(L);
+		L.EndModule();
+		L.BeginModule("Resource");
+		L.RegFunction("DecryptResourceCallback", new LuaCSFunction(GameFramework_Resource_DecryptResourceCallback));
+		L.RegFunction("InitResourcesCompleteCallback", new LuaCSFunction(GameFramework_Resource_InitResourcesCompleteCallback));
+		L.RegFunction("CheckResourcesCompleteCallback", new LuaCSFunction(GameFramework_Resource_CheckResourcesCompleteCallback));
+		L.RegFunction("ApplyResourcesCompleteCallback", new LuaCSFunction(GameFramework_Resource_ApplyResourcesCompleteCallback));
+		L.RegFunction("UpdateResourcesCompleteCallback", new LuaCSFunction(GameFramework_Resource_UpdateResourcesCompleteCallback));
+		L.EndModule();
 		L.EndModule();
 		L.BeginModule("System");
+		System_EventArgsWrap.Register(L);
 		L.RegFunction("Action", new LuaCSFunction(System_Action));
 		L.RegFunction("Predicate_int", new LuaCSFunction(System_Predicate_int));
 		L.RegFunction("Action_int", new LuaCSFunction(System_Action_int));
 		L.RegFunction("Comparison_int", new LuaCSFunction(System_Comparison_int));
 		L.RegFunction("Func_int_int", new LuaCSFunction(System_Func_int_int));
+		L.RegFunction("EventHandler_GameFramework_Event_GameEventArgs", new LuaCSFunction(System_EventHandler_GameFramework_Event_GameEventArgs));
+		L.RegFunction("Predicate_GameFramework_ObjectPool_ObjectPoolBase", new LuaCSFunction(System_Predicate_GameFramework_ObjectPool_ObjectPoolBase));
 		L.RegFunction("Action_bool", new LuaCSFunction(System_Action_bool));
 		L.RegFunction("Action_string", new LuaCSFunction(System_Action_string));
 		L.RegFunction("Func_bool", new LuaCSFunction(System_Func_bool));
+		L.RegFunction("Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair", new LuaCSFunction(System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair));
 		L.RegFunction("Action_UnityEngine_AsyncOperation", new LuaCSFunction(System_Action_UnityEngine_AsyncOperation));
 		L.EndModule();
 		L.EndModule();
@@ -173,6 +202,156 @@ public static class LuaBinder
 			{
 				LuaTable self = ToLua.CheckLuaTable(L, 2);
 				Delegate arg1 = DelegateTraits<UnityEngine.Events.UnityAction>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GameFramework_Resource_DecryptResourceCallback(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.DecryptResourceCallback>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.DecryptResourceCallback>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GameFramework_Resource_InitResourcesCompleteCallback(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.InitResourcesCompleteCallback>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.InitResourcesCompleteCallback>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GameFramework_Resource_CheckResourcesCompleteCallback(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.CheckResourcesCompleteCallback>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.CheckResourcesCompleteCallback>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GameFramework_Resource_ApplyResourcesCompleteCallback(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.ApplyResourcesCompleteCallback>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.ApplyResourcesCompleteCallback>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GameFramework_Resource_UpdateResourcesCompleteCallback(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.UpdateResourcesCompleteCallback>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<GameFramework.Resource.UpdateResourcesCompleteCallback>.Create(func, self);
 				ToLua.Push(L, arg1);
 				func.Dispose();
 				self.Dispose();
@@ -336,6 +515,66 @@ public static class LuaBinder
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int System_EventHandler_GameFramework_Event_GameEventArgs(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<System.EventHandler<GameFramework.Event.GameEventArgs>>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<System.EventHandler<GameFramework.Event.GameEventArgs>>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int System_Predicate_GameFramework_ObjectPool_ObjectPoolBase(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<System.Predicate<GameFramework.ObjectPool.ObjectPoolBase>>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<System.Predicate<GameFramework.ObjectPool.ObjectPoolBase>>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int System_Action_bool(IntPtr L)
 	{
 		try
@@ -413,6 +652,36 @@ public static class LuaBinder
 			{
 				LuaTable self = ToLua.CheckLuaTable(L, 2);
 				Delegate arg1 = DelegateTraits<System.Func<bool>>.Create(func, self);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+				self.Dispose();
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>>>.Create(func);
+				ToLua.Push(L, arg1);
+				func.Dispose();
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<System.Action<UnityEngine.PhysicsScene,Unity.Collections.NativeArray<UnityEngine.ModifiableContactPair>>>.Create(func, self);
 				ToLua.Push(L, arg1);
 				func.Dispose();
 				self.Dispose();

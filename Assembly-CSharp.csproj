@@ -66,6 +66,7 @@
     <Compile Include="Assets\Deer\Scripts\Definition\Constant\PrefsKey.cs" />
     <Compile Include="Assets\ToLua\Core\LuaUnityLibs.cs" />
     <Compile Include="Assets\ToLua\Core\LuaDLL.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\ColorTypeWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Utils\AssetUtility\AssetUtility.Scene.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Procedure\ProcedureLauncher.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Common\UI\Helthbar\Scripts\HealthbarRoot.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_TransformWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\TestErrorStack\TestInstantiate.cs" />
     <Compile Include="Assets\ToLua\Misc\LuaLooper.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneSuccessEventArgsWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Proto\SpellConfig.cs" />
     <Compile Include="Assets\ToLua\Examples\01_HelloWorld\HelloWorld.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Common\UI\Helthbar\Scripts\RemoteHealth.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Assets\ToLua\Source\LuaConst.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_MaterialWrap.cs" />
     <Compile Include="Assets\ToLua\BaseType\System_Collections_Generic_DictionaryWrap.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\System_EventArgsWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Component\GameSettings\GameSettingsComponent.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_TrackedReferenceWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_ParticleSystemWrap.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_SphereColliderWrap.cs" />
     <Compile Include="Assets\ToLua\BaseType\System_DelegateWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\GameFramework_Fsm_FsmState_GameFramework_Procedure_IProcedureManagerWrap.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_UnloadSceneSuccessEventArgsWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_TimeWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Utils\FileUtils.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_CameraWrap.cs" />
@@ -128,8 +132,10 @@
     <Compile Include="Assets\Deer\Scripts\Framework\ComponentExtension\SceneComponentExtension.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Component\ComponentBinder\ComponentBinderInfo.cs" />
     <Compile Include="Assets\ToLua\Examples\09_Dictionary\System_Collections_Generic_Dictionary_int_TestAccount_ValueCollectionWrap.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneUpdateEventArgsWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\15_ProtoBuffer\TestProtol.cs" />
     <Compile Include="Assets\ToLua\Reflection\LuaProperty.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_ResourceComponentWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\UI\Joystick\TouchPad.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Procedure\ProcedureChangeLua.cs" />
     <Compile Include="Assets\Deer\Scripts\Proto\DeerGameBase.cs" />
@@ -208,11 +214,14 @@
     <Compile Include="Assets\ToLua\Examples\TestErrorStack\TestInstantiate2.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_ColliderWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\LuaInterface_InjectTypeWrap.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_ObjectPoolComponentWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\TestInjection\ToLuaInjectionTest.cs" />
     <Compile Include="Assets\ToLua\Examples\15_ProtoBuffer\TestProtoBuffer.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_EventComponentWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Component\ComponentBinder\ComponentBinder.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_MeshColliderWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Proto\SoundsConfig.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_UnloadSceneFailureEventArgsWrap.cs" />
     <Compile Include="Assets\ToLua\BaseType\LuaInterface_LuaFieldWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\25_luasocket\TestLuaSocket.cs" />
     <Compile Include="Assets\ToLua\BaseType\System_Collections_ObjectModel_ReadOnlyCollectionWrap.cs" />
@@ -242,6 +251,7 @@
     <Compile Include="Assets\Deer\Scripts\Framework\Component\ComponentBinder\ComponentBinderHelper.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_ShaderWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Component\Messenger\MessengerInfo.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\Constant_AssetPriorityWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\DataConfig\Info\SoundsConfigDataInfo.cs" />
     <Compile Include="Assets\ToLua\Core\LuaFileUtils.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Component\ComponentBinder\PanelItemInfo.cs" />
@@ -260,9 +270,12 @@
     <Compile Include="Assets\Deer\Scripts\Framework\Base\GameEntry.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Procedure\ProcedureBase.cs" />
     <Compile Include="Assets\ToLua\Core\LuaEvent.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\LuaComponentWrap.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_SceneComponentWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\Deer_ComponentBinderWrap.cs" />
     <Compile Include="Assets\ToLua\BaseType\UnityEngine_ObjectWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Base\GameEntry.Builtin.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\GameFramework_Event_GameEventArgsWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_LightWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Component\UI\OpenUIInfo.cs" />
     <Compile Include="Assets\ToLua\Core\LuaBeatEvent.cs" />
@@ -302,16 +315,20 @@
     <Compile Include="Assets\ToLua\Examples\22_Reflection\TestReflection.cs" />
     <Compile Include="Assets\ToLua\Core\LuaMatchType.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\LogWrap.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\GameFramework_GameFrameworkEventArgsWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_AnimatorWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\06_LuaCoroutine2\TestCoroutine2.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneDependencyAssetEventArgsWrap.cs" />
     <Compile Include="Assets\ToLua\Misc\LuaProfiler.cs" />
     <Compile Include="Assets\ToLua\Core\LuaBaseRef.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\GameFramework_BaseEventArgsWrap.cs" />
     <Compile Include="Assets\Deer\Scripts\Framework\Common\UI\Helthbar\Scripts\HealthBarEventHandler.cs" />
     <Compile Include="Assets\ToLua\Examples\03_CallLuaFunction\CallLuaFunction.cs" />
     <Compile Include="Assets\ToLua\Core\LuaFunction.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\UnityEngine_MonoBehaviourWrap.cs" />
     <Compile Include="Assets\ToLua\Source\Generate\Deer_ProcedureBaseWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\TestInjection\BaseTestWrap.cs" />
+    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneFailureEventArgsWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\11_Delegate\TestDelegate.cs" />
     <Compile Include="Assets\ToLua\BaseType\LuaInterface_LuaConstructorWrap.cs" />
     <Compile Include="Assets\ToLua\Examples\09_Dictionary\TestAccountWrap.cs" />
@@ -321,23 +338,6 @@
     <Compile Include="Assets\ToLua\Examples\21_String\TestString.cs" />
     <Compile Include="Assets\ToLua\Reflection\LuaField.cs" />
     <Compile Include="Assets\ToLua\BaseType\System_NullObjectWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_ResourceComponentWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_ObjectPoolComponentWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\Constant_AssetPriorityWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_EventComponentWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\LuaComponentWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_SceneComponentWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_UnloadSceneSuccessEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneFailureEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_UnloadSceneFailureEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\GameFramework_Event_GameEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\GameFramework_GameFrameworkEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneSuccessEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\ColorTypeWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\System_EventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneDependencyAssetEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\GameFramework_BaseEventArgsWrap.cs" />
-    <Compile Include="Assets\ToLua\Source\Generate\UnityGameFramework_Runtime_LoadSceneUpdateEventArgsWrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\StandardAssets\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll" />
