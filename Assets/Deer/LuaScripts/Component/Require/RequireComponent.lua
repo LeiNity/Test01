@@ -1,0 +1,7 @@
+require "Component.Base.LuaComponentBase"
+require "Component/Procedure/LuaProcedureComponent"
+require "Component/Event/LuaEventComponent"
+require "Component.Event.MessengerManager"
+require "Component.Sound.LuaSoundComponent"
+require "Component.UI.UIManager"
+require "Component.UI.LuaUIComponent"
